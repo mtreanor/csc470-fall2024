@@ -4,13 +4,14 @@
 ## Dates
 8/26/2024 - 12/14/2024
 
-Tuesday and Friday 12:55 PM - 2:10 PM
+**Time:** Tuesday and Friday 12:55 PM - 2:10 PM
 
-Don Myers Building - TBD
+**Location:** Kogod School of Business 233
 
 ## Office Hours
 
-Time TBD
+**Time:** Directly after most classes
+**Location:** DMTI 112B
 
 Don Myers Building - TBD
 

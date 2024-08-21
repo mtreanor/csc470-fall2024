@@ -15,20 +15,21 @@
 ## Create your repository for the class
 1. Open Github desktop and log in (you may need to go to Preferences->Accounts)
 1. Add a repository for the exercise
-    - Name the repository exactly "game615-spring2024" **Make 100% certain you are using that exact name - all lowercase**
+    - Name the repository exactly "csc470-fall2024" **Make 100% certain you are using that exact name - all lowercase**
+        - Please use this exact repository name even if you are a graduate student.
     - Make the repository public by unchecking "Keep this repository private"
     - For Local Path put it wherever you like to keep your class files on your computer
     - Ignore the other setting options
     - Check "Initialize this repository with a README"
     - Click "Create Repository"
 1. Locate the repository folder on your computer, and add two folders to it: `assignments` and `games`
-1. Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for game615") and click "Commit to master" (this should be on the bottom left of the window).
+1. Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for game programming") and click "Commit to master" (this should be on the bottom left of the window).
 1. On the top/middle region of the screen, click "Publish repository"
 1. In the future, in order to upload your assignments to Github you will go through a similar process as what you did in the last two steps. You will need to first "commit" your changes, and then you will press the button labeled "Push origin" (located at the same place as the "Publish repository" button).
 
 ## Setting up your Github repository for submitting work
 - Go to your web browser, log into Github.com, and find the repository you just created and posted (click the repositories tab).
-- Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the save button.
+- Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the 'save' button located to the right of the dropdown.
 - NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try this step again.
 
 ## Creating a Unity project

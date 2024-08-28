@@ -26,13 +26,14 @@ This course introduces students to design and production-oriented aspects of gam
 
 | Assignment | Due |
 | --- | --- |
-| 0. [Environment setup](./assignments/setup.html) | TBD |
+<!-- | 0. [Environment setup](./assignments/setup.html) | TBD | -->
+| 1. [Interactive Fiction (Introduction to C#)](./assignments/if.html) | 9-3-24 |
 
 ## Examples
 
 | Date | Topic | Code | Playable |
 | --- | --- | --- | --- |
-| | | | |
+| 9-30-24 | C# Basics | [link](https://dotnetfiddle.net/30nCwA) | N/A |
 
 ## Rough Topic List
 

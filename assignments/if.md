@@ -1,8 +1,8 @@
 # Interactive Fiction (welcome to C#)
 
-Before computers could even display images at all, made games out of words alone. This genre of game (refered to as Interactive Fiction or IF or parser fiction) became incredibly influential for how videogames developed, and people still write IF today.
+Before computers could even display images at all, people made games out of words alone. This genre of game (refered to as Interactive Fiction or IF or parser fiction) became incredibly influential for how videogames developed, and people still write IF today.
 
-In this assignment you will learn the basics of writing in the C# programming language while creating a work of Interactive Fiction. The assignment will require two parts: 
+In this assignment you will learn the basics of writing in the C# programming language while creating a small work of Interactive Fiction. The assignment will require two parts: 
 
 ## 1. Understanding Interactive Fiction
 
@@ -13,6 +13,19 @@ Play Zork for 30 minutes or more. You can play it [here](https://www.ifiction.or
 - `examine [item]`
 - `look`
 - and [many others](https://zork.fandom.com/wiki/Command_List)...
+
+### What to turn in
+
+Write a short reflection about what it was like to play Zork, and include it as a block comment at the top of you dotfiddle code project (described below).
+
+It will look something like this: 
+
+```
+/*
+This was the first time I ever played something like this and here's what I thought about it........
+*/
+// and then the rest of your program.
+```
 
 ## 2. Create a Simple Work of Interactive Fiction using C# in dotnetfiddle.
 

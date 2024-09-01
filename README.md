@@ -32,7 +32,7 @@ This course introduces students to design and production-oriented aspects of gam
 
 | Date | Topic | Code | Playable |
 | --- | --- | --- | --- |
-| 9-30-24 | C# Basics | [link](https://dotnetfiddle.net/30nCwA) / [link](http://dotnetfiddle.net/rVO9uW) | N/A |
+| 9-30-24 | C# Basics | [link](http://dotnetfiddle.net/rVO9uW) | N/A |
 
 ## Rough Topic List
 

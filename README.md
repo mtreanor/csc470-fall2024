@@ -27,6 +27,7 @@ This course introduces students to design and production-oriented aspects of gam
 | Assignment | Due |
 | --- | --- |
 | 1. [Interactive Fiction (Introduction to C#)](./assignments/if.html) | 9-3-24 |
+| 2. [Environment Setup](./assignments/setup.html) | 9-6-24 |
 
 ## Examples
 

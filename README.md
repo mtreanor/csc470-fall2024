@@ -33,7 +33,8 @@ This course introduces students to design and production-oriented aspects of gam
 
 | Date | Topic | Code | Playable |
 | --- | --- | --- | --- |
-| 9-30-24 | C# Basics | [link](http://dotnetfiddle.net/rVO9uW) | N/A |
+| 8-30-24 | C# Basics | [link](http://dotnetfiddle.net/rVO9uW) | N/A |
+| 9-3-24 | First Unity Project | [link](./examples/9-3-24/Assets) | [play](./games/9-3-24) |
 
 ## Rough Topic List
 

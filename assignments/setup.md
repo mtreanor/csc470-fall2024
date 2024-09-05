@@ -4,7 +4,7 @@
 1. Download and install [Unity Hub](https://unity.com/download).
 1. Using Unity Hub, download and install Unity LTS Release 2022.3.44f1. **Make 100% certain you are downloading that exact version!**
     - When prompted, be sure to include WebGL build support
-    - **When asked, definitely choose to download and use Visual Studio!!!**
+    - **When asked, definitely choose to download and use Visual Studio Code!!!**
 
 ## Github
 1. Go to [github.com](https://github.com/) and create an account

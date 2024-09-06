@@ -28,6 +28,7 @@ This course introduces students to design and production-oriented aspects of gam
 | --- | --- |
 | 1. [Interactive Fiction (Introduction to C#)](./assignments/if.html) | 9-3-24 |
 | 2. [Environment Setup](./assignments/setup.html) | 9-6-24 |
+| 3. [Rube Goldberg Machine](./assignments/machine.html) | 9-13-24 |
 
 ## Examples
 
@@ -35,6 +36,8 @@ This course introduces students to design and production-oriented aspects of gam
 | --- | --- | --- | --- |
 | 8-30-24 | C# Basics | [link](http://dotnetfiddle.net/rVO9uW) | N/A |
 | 9-3-24 | First Unity Project | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-3-24/Assets) | [play](./games/9-3-24) |
+| 9-6-24 | Component-based Game Engine Pseudocode | [link](http://dotnetfiddle.net/XyWKeI) | N/A |
+| 9-6-24 | Rolling Turkey | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-6-24/Assets) | [play](./games/9-6-24) |
 
 ## Rough Topic List
 

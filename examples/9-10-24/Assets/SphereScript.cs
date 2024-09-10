@@ -26,8 +26,15 @@ public class SphereScript : MonoBehaviour
         }
     }
 
+    // Unity will tell the function below to run under the following conditions:
+    //  1. Two objects with colliders are colliding
+    //  2. At least one of the objects' colliders are marked as "Is Trigger"
+    //  3. At least one of the objects has a Rigidbody
     public void OnTriggerEnter(Collider other)
     {
+        // 'other' is the name of the collider that just collided with the object
+        // that this script (the "coin") is attached to.
+
         // Destroy the coin!
         Destroy(other.gameObject);
 

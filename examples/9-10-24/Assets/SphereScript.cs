@@ -6,6 +6,7 @@ using TMPro;
 
 public class SphereScript : MonoBehaviour
 {
+    // Assign these public variables using the Unity editor
     public TMP_Text scoreText;
     public Rigidbody rb;
 
@@ -14,14 +15,17 @@ public class SphereScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Update the score UI to the defaul value (0)
         scoreText.text = "Score: " + score;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // If this is true, the player just pressed space
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // Activate the gravity on the rigidbody
             rb.useGravity = true;
         }
     }
@@ -49,10 +53,10 @@ public class SphereScript : MonoBehaviour
         }
     }
 
+    // FYI: This function happens when two colliders collide that AREN'T marked as triggers
     // public void OnCollisionEnter(Collision col)
     // {
     //     Debug.Log("hit the ground!");
     // }
-
 
 }

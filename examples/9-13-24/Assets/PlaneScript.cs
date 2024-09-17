@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlaneScript : MonoBehaviour
 {
+    // Remember to assign a value to this variable in the Unity editor!
+    // I.e. Drag the camera into the slot in the inspector when you select the plane.
+    public GameObject cameraObject;
+
     // These variables will control how the plane moves
-    float forwardSpeed = 0.01f;
-    float xRotationSpeed = 0.2f;
-    float yRotationSpeed = 0.2f;
+    float forwardSpeed = 12f;
+    float xRotationSpeed = 90f;
+    float yRotationSpeed = 90f;
+
+    float boostTime;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +29,22 @@ public class PlaneScript : MonoBehaviour
         float vAxis = Input.GetAxis("Vertical"); // -1 if down is pressed, 1 if up is pressed, 0 if neither
 
         // Apply the rotation based on the inputs
-        transform.Rotate(vAxis * xRotationSpeed, hAxis * yRotationSpeed, 0, Space.Self);
+        Vector3 amountToRotate = new Vector3(0,0,0);
+        amountToRotate.x = vAxis * xRotationSpeed;
+        amountToRotate.y = hAxis * yRotationSpeed;
+        amountToRotate *= Time.deltaTime; // amountToRotate = amountToRotate * Time.deltaTime;
+        transform.Rotate(amountToRotate, Space.Self);
 
         // Make the plane move forward by adding the forward vector to the position.
-        transform.position += transform.forward * forwardSpeed;
+        transform.position += transform.forward * forwardSpeed * Time.deltaTime;
+
+        // Position the camera
+        Vector3 cameraPosition = transform.position;
+        cameraPosition += -transform.forward * 10f; // Negative forward points in the opposite direction as forward
+        cameraPosition += Vector3.up * 8f; // Vector3.up is (0,1,0)
+        cameraObject.transform.position = cameraPosition;
+        // LookAt is a utility function that rotates a transform so that it looks at a point
+        cameraObject.transform.LookAt(transform.position);
     }
 
 

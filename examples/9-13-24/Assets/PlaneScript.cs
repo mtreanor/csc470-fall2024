@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlaneScript : MonoBehaviour
 {
     // Remember to assign a value to this variable in the Unity editor!
     // I.e. Drag the camera into the slot in the inspector when you select the plane.
     public GameObject cameraObject;
+
+    public Terrain terrain;
+
+    public TMP_Text scoreText;
+
+    int score = 0;
 
     // These variables will control how the plane moves
     float forwardSpeed = 12f;
@@ -35,6 +42,13 @@ public class PlaneScript : MonoBehaviour
         amountToRotate *= Time.deltaTime; // amountToRotate = amountToRotate * Time.deltaTime;
         transform.Rotate(amountToRotate, Space.Self);
 
+        // Deal with colliding with the terrain
+        float terrainHeight = terrain.SampleHeight(transform.position);
+        if (transform.position.y < terrainHeight) {
+            forwardSpeed = 0;
+        }
+
+
         // Make the plane move forward by adding the forward vector to the position.
         transform.position += transform.forward * forwardSpeed * Time.deltaTime;
 
@@ -56,10 +70,20 @@ public class PlaneScript : MonoBehaviour
     {
         // 'other' is the name of the collider that just collided with the object
         // that this script is attached to (the plane).
-        // Check to see that it has the tag "collectable". Tags are assigned in the Unity editor.
         if (other.CompareTag("collectable"))
         {
+            // Check to see that it has the tag "collectable". Tags are assigned in the Unity editor.
+            score++;
+
+            scoreText.text = "Score: " + score;
+
             Destroy(other.gameObject);
+        } 
+        else if (other.CompareTag("wall")) 
+        {
+            // Check to see if we hit a big invisible wall, and if so turn around!
+            transform.Rotate(0, 180, 0, Space.World);
         }
+
     }
 }

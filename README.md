@@ -40,7 +40,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 9-6-24 | Component-based Game Engine Pseudocode | [link](http://dotnetfiddle.net/XyWKeI) | N/A |
 | 9-6-24 | Rolling Turkey | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-6-24/Assets) | [play](./games/9-6-24) |
 | 9-10-24 | Basic triggers, and changing UI text | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-10-24/Assets) | [play](./games/machine) |
-| 9-13-24 / 9-17-24 | Moving game objects with code, forward vector, positioning the camera | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-13-24/Assets) | [play](./games/9-13-24) |
+| 9-13-24 / 9-17-24 / 9-20-24 | Moving game objects with code, forward vector, positioning the camera with code, terrain 'collision', invisible walls, updating simple UI | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-13-24/Assets) | [play](./games/9-13-24) |
 
 ## Rough Topic List
 

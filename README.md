@@ -30,6 +30,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 2. [Environment Setup](./assignments/setup.html) | 9-6-24 |
 | 3. [Rube Goldberg Machine](./assignments/machine.html) | 9-13-24 |
 | 4. [Flight Simulator](./assignments/flight.html) | 9-24-24 |
+| 4. [Emergence Game](./assignments/emergence.html) | 10-8-24 |
 
 ## Examples
 
@@ -42,6 +43,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 9-10-24 | Basic triggers, and changing UI text | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-10-24/Assets) | [play](./games/machine) |
 | 9-13-24 / 9-17-24 / 9-20-24 | Moving game objects with code, forward vector, positioning the camera with code, terrain 'collision', invisible walls, updating simple UI | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-13-24/Assets) | [play](./games/9-13-24) |
 | 9-24-24 | Instantiating prefabs, positioning objects using sine, changing colors using HSB | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-24-24/Assets) | [play](./games/9-24-24) |
+| 9-27-24 | Instantiating a grid of clickable cells | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-27-24/Assets) | [play](./games/9-27-24) |
 
 ## Rough Topic List
 

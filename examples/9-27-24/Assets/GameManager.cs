@@ -27,6 +27,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int CountNeighbors(int xIndex, int yIndex)
+    {
+        int count = 0;
+
+        for (int x = xIndex - 1; x <= xIndex + 1; x++)
+        {
+            for (int y = yIndex - 1; y <= yIndex + 1; y++)
+            {
+                if (!(x == xIndex && y == yIndex))
+                {
+                    if (grid[x,y].alive)
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
     // Update is called once per frame
     void Update()
     {

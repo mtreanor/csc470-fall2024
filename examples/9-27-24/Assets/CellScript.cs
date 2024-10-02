@@ -14,10 +14,15 @@ public class CellScript : MonoBehaviour
     public Color aliveColor;
     public Color deadColor;
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         SetColor();
+
+        GameObject gmObj = GameObject.Find("GameManagerObject");
+        gameManager = gmObj.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -30,6 +35,10 @@ public class CellScript : MonoBehaviour
     {
         alive = !alive;
         SetColor();
+
+        // Count my neighbors!
+        int neighborCount = gameManager.CountNeighbors(xIndex, yIndex);
+        Debug.Log("(" + xIndex + "," + yIndex + "): " + neighborCount);
     }
     void SetColor() {
         if (alive) {

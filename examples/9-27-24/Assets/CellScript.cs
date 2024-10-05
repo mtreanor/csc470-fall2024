@@ -8,6 +8,8 @@ public class CellScript : MonoBehaviour
 
     public bool alive = false;
 
+    public int aliveCount = 0;
+
     public int xIndex = -1;
     public int yIndex = -1;
 
@@ -40,11 +42,12 @@ public class CellScript : MonoBehaviour
         int neighborCount = gameManager.CountNeighbors(xIndex, yIndex);
         Debug.Log("(" + xIndex + "," + yIndex + "): " + neighborCount);
     }
-    void SetColor() {
-        if (alive) {
-            cubeRenderer.material.color = aliveColor;
-        } else {
-            cubeRenderer.material.color = deadColor;
-        }
+    public void SetColor() {
+        // if (alive) {
+        //     cubeRenderer.material.color = aliveColor;
+        // } else {
+        //     cubeRenderer.material.color = deadColor;
+        // }
+        cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
     }
 }

@@ -43,11 +43,21 @@ public class CellScript : MonoBehaviour
         Debug.Log("(" + xIndex + "," + yIndex + "): " + neighborCount);
     }
     public void SetColor() {
-        // if (alive) {
-        //     cubeRenderer.material.color = aliveColor;
-        // } else {
-        //     cubeRenderer.material.color = deadColor;
-        // }
-        cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
+        if (alive) {
+            cubeRenderer.material.color = aliveColor;
+        } else {
+            cubeRenderer.material.color = deadColor;
+        }
+        // cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) 
+        {
+            alive = !alive;
+            SetColor();
+            Debug.Log("stepped on: " + xIndex + " " + yIndex);
+        }
     }
 }

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5772811603809349745}
   - component: {fileID: 7054201659230879991}
   - component: {fileID: 8206972245528575795}
+  - component: {fileID: 7321695414440882398}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -152,7 +153,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeRenderer: {fileID: 5872510712651431135}
   alive: 1
+  aliveCount: 0
   xIndex: -1
   yIndex: -1
   aliveColor: {r: 0.50972176, g: 1, b: 0.4198113, a: 0}
   deadColor: {r: 0.7378952, g: 0.4198113, b: 1, a: 0}
+--- !u!65 &7321695414440882398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5289505667159567073}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.4, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}

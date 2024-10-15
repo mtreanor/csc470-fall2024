@@ -3,7 +3,7 @@
 **Name your Unity project `emergence`**
 
 ## Due
-Friday October 11th at 12:55pm.
+Tuesday October 15th at 12:55pm.
 
 ## Description
 Create a small game that features [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in some interesting way.

@@ -31,6 +31,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 3. [Rube Goldberg Machine](./assignments/machine.html) | 9-13-24 |
 | 4. [Flight Simulator](./assignments/flight.html) | 9-24-24 |
 | 5. [Emergence Game](./assignments/emergence.html) | 10-15-24 |
+| 6. [Platformer](./assignments/platformer.html) | 10-29-24 |
 
 ## Examples
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlatformerController : MonoBehaviour
 {
+    public Transform cameraTransform;
+
     public CharacterController cc;
     float rotateSpeed = 90;
     float moveSpeed = 8f;
@@ -19,6 +21,10 @@ public class PlatformerController : MonoBehaviour
     float friction = -2.8f;
 
 
+    GameObject movingPlatform;
+    Vector3 previousMovingPlatformPosition;
+
+
     // This will keep track of how long we have been falling, we will use this 
     // for "coyote time" (keeping track of how long it has been since we have
     // started falling), and letting the player jump for a certain amount of time.
@@ -29,7 +35,7 @@ public class PlatformerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -41,7 +47,7 @@ public class PlatformerController : MonoBehaviour
         // --- ROTATION ---
         // Rotate on the y axis based on the hAxis value
         // NOTE: If the player isn't pressing left or right, hAxis will be 0 and there will be no rotation
-        transform.Rotate(0, rotateSpeed * hAxis * Time.deltaTime, 0);
+        // transform.Rotate(0, rotateSpeed * hAxis * Time.deltaTime, 0);
 
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
             dashVelocity = dashAmount;
@@ -94,7 +100,10 @@ public class PlatformerController : MonoBehaviour
         // Move the player forward based on the vAxis value
         // Note, If the player isn't pressing up or down, vAxis will be 0 and there will be no movement
         // based on input. However, yVelocity will still move the player downward.
-        Vector3 amountToMove = transform.forward * moveSpeed * vAxis;
+        Vector3 flatCameraForward = cameraTransform.forward;
+        flatCameraForward.y = 0;
+        Vector3 amountToMove = flatCameraForward.normalized * moveSpeed * vAxis;
+        amountToMove += cameraTransform.right * moveSpeed * hAxis;
 
         // Apply the dash (i.e. add the forward vector scaled by the forwardVelocity)
         amountToMove += transform.forward * dashVelocity;
@@ -103,8 +112,33 @@ public class PlatformerController : MonoBehaviour
 
         amountToMove *= Time.deltaTime;
 
+        // Deal with moving platform. Add the amount that the platform moved to amountToMove
+        if (movingPlatform != null) {
+            Vector3 amountPlatformMoved = movingPlatform.transform.position - previousMovingPlatformPosition;
+            amountToMove += amountPlatformMoved;
+            previousMovingPlatformPosition = movingPlatform.transform.position;
+        }
+
         // This will move the player according to the forward vector and the yVelocity using the
         // CharacterController.
         cc.Move(amountToMove);
+
+        // Handle the rotation
+        amountToMove.y = 0;
+        transform.forward = amountToMove.normalized;
+        // transform.rotation = Quaternion.LookRotation(amountToMove);
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("MovingPlatform")) {
+            movingPlatform = other.gameObject;
+            previousMovingPlatformPosition = movingPlatform.transform.position;
+        }
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.CompareTag("MovingPlatform")) {
+            movingPlatform = null;
+        }
     }
 }

@@ -45,7 +45,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 9-13-24 / 9-17-24 / 9-20-24 | Moving game objects with code, forward vector, positioning the camera with code, terrain 'collision', invisible walls, updating simple UI | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-13-24/Assets) | [play](./games/9-13-24) |
 | 9-24-24 | Instantiating prefabs, positioning objects using sine, changing colors using HSB | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-24-24/Assets) | [play](./games/9-24-24) |
 | 9-27-24 | Instantiating a grid of clickable cells, counting neighbors in the grid, evolving the grid with the rules of Conway's Life, a first person controller | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-27-24/Assets) | [play](./games/9-27-24) |
-| 10-15-24 | Basic platformer controls (with CharacterController) | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/10-15-24/Assets) | [play](./games/10-15-24) |
+| 10-15-24 | Platformer controls (with CharacterController), basic dash, basic fine tuning of controls | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/10-15-24/Assets) | [play](./games/10-15-24) |
 
 ## Rough Topic List
 

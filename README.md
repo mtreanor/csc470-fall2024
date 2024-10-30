@@ -46,6 +46,7 @@ This course introduces students to design and production-oriented aspects of gam
 | 9-24-24 | Instantiating prefabs, positioning objects using sine, changing colors using HSB | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-24-24/Assets) | [play](./games/9-24-24) |
 | 9-27-24 | Instantiating a grid of clickable cells, counting neighbors in the grid, evolving the grid with the rules of Conway's Life, a first person controller | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/9-27-24/Assets) | [play](./games/9-27-24) |
 | 10-15-24 | Platformer controls (with CharacterController), basic dash, basic fine tuning of controls | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/10-15-24/Assets) | [play](./games/10-15-24) |
+| 10-29-24 | ??? | [link](https://github.com/mtreanor/csc470-fall2024/tree/main/examples/10-29-24/Assets) | [play](./games/10-29-24) |
 
 ## Rough Topic List
 

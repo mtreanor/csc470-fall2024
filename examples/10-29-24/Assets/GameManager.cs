@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public Camera mainCamera;
+
     public UnitScript selectedUnit;
 
     public List<UnitScript> units = new List<UnitScript>();
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text statText;
     public Image portraitImage;
 
+    LayerMask layerMask;
 
     void OnEnable() 
     {
@@ -33,14 +36,23 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nameText.text = "Mew Mew";
-        bioText.text = "Mew Mew was raised on the mean street but has been indoors fo 15 years.";
-        statText.text = "STRENGTH: 18";
+        layerMask = LayerMask.GetMask("ground");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0)) {
+            Ray mousePositionRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(mousePositionRay, out hitInfo, Mathf.Infinity, layerMask)) 
+            {
+                // If we get in here, the mouse is over the ground!
+                if (selectedUnit != null) {
+                    selectedUnit.gameObject.transform.position = hitInfo.point;
+                }
+            }
+        }
         
     }
 

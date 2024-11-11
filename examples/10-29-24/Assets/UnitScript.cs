@@ -8,15 +8,26 @@ public class UnitScript : MonoBehaviour
     public string bio;
     public string stats;
 
+
+    public GameObject wallSeeingSphere;
+
     public Renderer bodyRenderer;
     public Color normalColor;
     public Color selectedColor;
     public bool selected = false;
 
+    float rotateSpeed;
+
+    LayerMask layerMask;
+
     // Start is called before the first frame update
     void Start()
     {
+        layerMask = LayerMask.GetMask("wall");
+
         GameManager.instance.units.Add(this);
+
+        rotateSpeed = Random.Range(20, 60);
 
         transform.Rotate(0, Random.Range(0, 360), 0);
     }
@@ -31,7 +42,32 @@ public class UnitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+
+        Vector3 rayStart = transform.position + Vector3.up * 1.75f;
+
+        Color rayColor = Color.red;
+        RaycastHit hit;
+        if (Physics.Raycast(rayStart, transform.forward, out hit, Mathf.Infinity, layerMask))
+        {
+            // We hit something!
+            // if (hit.collider.CompareTag("wall")) {
+                wallSeeingSphere.SetActive(true);
+                wallSeeingSphere.transform.position = hit.point;
+        //     } else if (hit.collider.CompareTag("unit")) {
+        //         wallSeeingSphere.SetActive(false);
+        //         if (hit.collider.gameObject.GetComponent<UnitScript>().unitName == "Mew Mew") {
+        //             rayColor = Color.blue;
+        //         } else {
+        //             rayColor = Color.white;
+        //         }
+        //     } else {
+        //         wallSeeingSphere.SetActive(false);
+        //     }
+        } else {
+            wallSeeingSphere.SetActive(false);
+        }
+        Debug.DrawRay(rayStart, transform.forward * 4, rayColor);
     }
 
     void OnMouseDown() {

@@ -1,5 +1,7 @@
 # Final Project: A Complete Game with a Theme
 
+**Name your Unity project `final`**
+
 The final project is for you to create a complete (small) game. Where the previous small games were intended to give you experience and practice with the technical topics in the course, the final project should be a complete, tuned, fun and relatively good-looking game that you could give to a stranger and it would be reasonable to expect that they would enjoy their experience (that’s harder than it sounds!).
 
 Also, have your game have some sort of theme, or some sort of story (even if it is a small/abstract one). Many of you are already doing this, but try to do something "on purpose" rather than just defaulting to whatever you can make work or whatever game trope comes to mind.

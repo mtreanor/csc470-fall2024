@@ -16,3 +16,4 @@
 - Positioning the camera using code.
 - Using Probuilder to create custom shapes and interiors.
 - Using the terrain editor.
+- Using Time.deltaTime, float variables, if statements and the Update function to create a timer.

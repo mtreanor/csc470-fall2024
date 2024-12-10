@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class NPCScript : MonoBehaviour
 {
     public NavMeshAgent nma;
+
+    public GameObject projectile;
 
     public GameObject arrivedHomeTextObject;
     public GameObject clickToBeginTextObject;
@@ -14,10 +17,21 @@ public class NPCScript : MonoBehaviour
 
     Vector3 startPosition;
 
+    public PostProcessProfile ppp;
+    Grain grain;
+
     // Start is called before the first frame update
     void Start()
     {
         startPosition = transform.position;
+
+        int score = PlayerPrefs.GetInt("score");
+        Debug.Log(score);
+
+        ppp.TryGetSettings<Grain>(out grain);
+        grain.intensity.value = 1f;
+
+        StartCoroutine(ShootProjectiles());
 
         StartCoroutine(ChairBehavior());
     }
@@ -46,6 +60,16 @@ public class NPCScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator ShootProjectiles() {
+
+        GameObject p = Instantiate(projectile, transform.position, transform.rotation);
+        p.GetComponent<Rigidbody>().velocity = transform.forward * 500f;
+
+        Destroy(p, 2);
+
+        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator ChairBehavior()
